@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+
+    <label for="search" class="visuallyhidden">Search: </label>
+    <input type="text" name="search" id="search" />
+    <button type="submit">Search</button>
+
+    <div role="region" aria-labelledby="pollhead">
+      <h3 id="pollhead">This week's Poll</h3>
+      <form method="post" action="#">
+        <fieldset>
+          <legend>Do you believe the tax code needs to be overhauled?</legend>
+          <input type="radio" id="r1" name="poll" />
+          <label for="r1">No, it's fine the way it is</label>
+          <input type="radio" id="r2" name="poll" />
+          <label for="r2">Yes, the wealthy need to pay more</label>
+          <input type="radio" id="r3" name="poll" />
+          <label for="r3">Yes, we need to close corporate loopholes</label>
+          <input type="radio" id="r4" name="poll" />
+          <label for="r4">Changes should be made across the board</label>
+        </fieldset>
+      </form>
+      <a href="results.php">See Poll Results</a>
+    </div>
+
+    <ol>
+      <li>
+        <a
+          id="l1"
+          href="#"
+          aria-expanded="false"
+          title="Show details"
+          aria-controls="block1"
+          >John Henry's Account</a
+        ><img src="images/panel_expand.gif" alt="" />
+        <div
+          id="block1"
+          class="nowHidden"
+          tabindex="-1"
+          aria-labelledby="l1 cd1"
+          role="region"
+        >
+          <span id="cd1" role="heading" aria-level="3"
+            >Certificate of Deposit:</span
+          >
+          <table>
+            <tr>
+              <th scope="row">Account:</th>
+              <td>25163522</td>
+            </tr>
+            <tr>
+              <th scope="row">Start date:</th>
+              <td>February 1, 2014</td>
+            </tr>
+            <tr>
+              <th scope="row">Maturity date:</th>
+              <td>February 1, 2016</td>
+            </tr>
+            <tr>
+              <th scope="row">Deposit Amount:</th>
+              <td>$ 3,000.00</td>
+            </tr>
+            <tr>
+              <th scope="row">Maturity Amount:</th>
+              <td>$ 3,072.43</td>
+            </tr>
+          </table>
+        </div>
+      </li>
+    </ol>
+
+    <br /><br />
+
+    <input
+      type="checkbox"
+      name="activate"
+      value="activate"
+      onchange="change()"
+      style="position: absolute;left: 20px;top: 550px;"
+    />
+    <br />
+    <button
+      id="btn#1"
+      style="position: absolute;left: 20px;top: 580px;width: 180px;height: 50px; "
+      onClick="location.href='https://444.hu/'"
+    >
+      444.hu a11y
+    </button>
+    <button
+      id="btn#2"
+      style="position: absolute;left: 20px;top: 580px;width: 180px; height: 50px;"
+      aria-hidden="true"
+      onClick="location.href='https://index.hu/'"
+    >
+      index.hu
+    </button>
+    <!-- aria-hidden="true" -->
+  </body>
+  <script>
+    // var state = false;
+    // (function onload() {
+    //   state = false;
+    //   change();
+    // })();
+    // function change() {
+    //   state = state === true ? false : true;
+    //   state === true
+    //     ? document.getElementById('btn#2').setAttribute('disabled', state)
+    //     : document.getElementById('btn#2').removeAttribute('disabled');
+    //   state === true
+    //     ? document.getElementById('btn#1').setAttribute('disabled', state)
+    //     : document.getElementById('btn#1').removeAttribute('disabled');
+    // state === true
+    //   ? document.getElementById('btn#2').setAttribute('aria-disabled', false)
+    //   : document
+    //       .getElementById('btn#1')
+    //       .removeAttribute('aria-disabled', true);
+    // }
+  </script>
+</html>
